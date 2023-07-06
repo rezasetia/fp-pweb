@@ -3,9 +3,9 @@
 include "koneksi.php";
 
 // Cek apakah parameter 'keyword' telah diberikan melalui metode GET
-if (isset($_GET['keyword'])) {
+if (isset($_POST['keyword'])) {
   // Dapatkan nilai keyword dari URL
-  $keyword = $_GET['keyword'];
+  $keyword = $_POST['keyword'];
 
   // Query pencarian data barang
   $sql = "SELECT * FROM kucing WHERE jenis LIKE '%$keyword%'";

@@ -27,7 +27,7 @@ if (!empty($_SESSION['status'])) {
   <div class="flex h-screen 
                 bg-cover bg-center items-center justify-center" style="background-image: url(img/loginn.png);">
     <button class=" absolute left-0 top-0 mt-4 ml-4">
-      <a href="HalamanPertama.php"><img src="img/Line 14 (1).png" alt="anakpanah"></a>
+      <a href="index.php"><img src="img/Line 14 (1).png" alt="anakpanah"></a>
 
     </button>
 

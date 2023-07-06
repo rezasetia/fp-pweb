@@ -84,13 +84,18 @@
 <!-- row seacrh -->
 <div class="font-bold ml-5 ">Search</div>
     <!-- baris ke 5 -->
-    <div class="rounded-full bg-gray-300 w-1/2 ml-5 mb-5 flex items-center mt-5">
-        <button>
-          <img src="img/Group 19.png" alt="pencarian" class="p-2">
-        </button>
-        <input type="email" id="email" class="bg-gray-300 w-full py-2 px-4 rounded-md 
-        hover:bg-white mr-2" placeholder="Cari barang anda">
-      </div>
+    <div class="flex items-center">
+  <form action="pencarian.php" method="post" class="flex items-center">
+    <div class="mr-2">
+      <button type="submit">
+        <img src="img/Group 19.png" alt="pencarian" class="p-2 " width="60">
+      </button>
+    </div>
+    <div>
+      <input class="rounded-full border py-2 px-4" type="text" name="keyword" placeholder="Cari barang Anda">
+    </div>
+  </form>
+</div
 
 <!-- row baris pilihan kucing anjing burung kelinci-->
 <div class="relative inline-block  w-64">

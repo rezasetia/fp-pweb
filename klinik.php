@@ -1,3 +1,3 @@
 <div>
-    sabar ya belum jadi soalnya
+    belum jadi
 </div>

@@ -54,7 +54,7 @@ if (empty($_SESSION['status']) || $_SESSION['status'] != 'aktif')
       <!-- kotak kedua -->
 
       <div class="flex items-center">
-  <form action="pencarian.php" method="GET" class="flex items-center">
+  <form action="pencarian.php" method="post" class="flex items-center">
     <div class="mr-2">
       <button type="submit">
         <img src="img/Group 19.png" alt="pencarian" class="p-2 " width="60">

@@ -4,7 +4,7 @@ include "koneksi.php";
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Retrieve the submitted form data
-    
+
     $oldPassword = $_POST['password1'];
     $newPassword = $_POST['password2'];
 
@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Update the password in the database
         $updateSql = "UPDATE user SET password='$newPassword' WHERE username='$username'";
         if (mysqli_query($link, $updateSql)) {
-         
+
             $_SESSION['success_message'] = "Password updated successfully!";
             header("location: dasboard.php");
             exit;
@@ -31,4 +31,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo "Old password is incorrect.";
     }
 }
-?>

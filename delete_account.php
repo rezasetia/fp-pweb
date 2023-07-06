@@ -3,9 +3,10 @@ session_start();
 // Pastikan pengguna sudah login atau sesuai dengan kebutuhan Anda
 
 // Fungsi delete account
-function deleteAccount($link) {
+function deleteAccount($link)
+{
     // Perintah SQL untuk menghapus data pengguna dari tabel yang relevan
-    
+
     $query = "DELETE FROM user WHERE status = 'aktif'";
 
     // Eksekusi perintah SQL
@@ -13,7 +14,7 @@ function deleteAccount($link) {
         // Jika penghapusan berhasil, lakukan logout
         session_unset(); // Menghapus semua data session
         session_destroy(); // Menghapus session
-        header("Location: halamanPertama.php"); // Mengalihkan ke halaman login
+        header("Location: index.php"); // Mengalihkan ke halaman login
         exit();
     } else {
         // Jika terjadi kesalahan dalam penghapusan
@@ -34,4 +35,3 @@ deleteAccount($link);
 
 // Tutup koneksi database
 mysqli_close($link);
-?>

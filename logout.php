@@ -10,7 +10,7 @@ mysqli_query($link, $query);
 function logout() {
     session_destroy();
     // Mengalihkan ke halaman login
-    header("Location: halamanPertama.php");
+    header("Location: index.php");
     exit();
 }
 

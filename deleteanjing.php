@@ -2,11 +2,11 @@
 session_start();
 include "koneksi.php"; // Menghubungkan ke database
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['id'])) {
-    $id = $_POST['id'];
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['Id'])) {
+    $Id = $_POST['Id'];
 
     // Query untuk menghapus data berdasarkan ID
-    $deleteQuery = "DELETE FROM anjing WHERE id = '$id'";
+    $deleteQuery = "DELETE FROM anjing WHERE Id = '$Id'";
     $deleteResult = mysqli_query($link, $deleteQuery);
 
     if ($deleteResult) {

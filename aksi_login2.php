@@ -7,7 +7,7 @@ $errors = array(); // Inisialisasi array kosong untuk menyimpan kesalahan
 if (isset($_POST['submit'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
-
+    $_SESSION['username'] = $username; //simpan username kedalam sesi
     // Mencari data pengguna dalam database berdasarkan username yang diberikan
     $query = "SELECT * FROM user WHERE username = '$username'";
     $result = mysqli_query($link, $query);
@@ -16,9 +16,9 @@ if (isset($_POST['submit'])) {
         $row = mysqli_fetch_assoc($result);
 
         if ($password == $row['password']) {
+            
+          
             // Login berhasil
-            $_SESSION['username'] = $username;
-
             // Perbarui status menjadi aktif
             $queryUpdate = "UPDATE user SET status = 'aktif' WHERE username = '$username'";
             mysqli_query($link, $queryUpdate);

@@ -16,7 +16,7 @@ if (empty($_SESSION['role'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Table</title>
+    <title>user</title>
     <link href="output.css" rel="stylesheet">
 </head>
 
@@ -116,6 +116,7 @@ if (empty($_SESSION['role'])) {
             <h2 class="text-2xl font-bold mb-4">
                 <span style="color: red;">Insert Data Kucing</span>
             </h2>
+
             <form action="insertkucing.php" method="post">
                 <label for="jenis">Jenis:</label>
                 <input type="text" name="jenis" id="jenis">
@@ -169,7 +170,7 @@ if (empty($_SESSION['role'])) {
                     if (mysqli_num_rows($result2) > 0) {
                         while ($row = mysqli_fetch_assoc($result2)) {
                             echo "<tr>";
-                            echo "<td class='border p-2'>" . $row['id'] . "</td>";
+                            echo "<td class='border p-2'>" . $row['Id'] . "</td>";
                             echo "<td class='border p-2'>" . $row['jenis'] . "</td>";
                             echo "<td class='border p-2'><img src='img/" . $row['gambar'] . "' width='100'></td>";
                             echo "<td class='border p-2'>" . $row['harga'] . "</td>";
@@ -188,11 +189,11 @@ if (empty($_SESSION['role'])) {
                 </h2>
                 <form action="insertanjing.php" method="post">
                     <label for="jenis">Jenis:</label>
-                    <input type="text" name="jenis" id="jenis">
+                    <input type="text" name="jenis" Id="jenis">
                     <label for="gambar">Gambar:</label>
-                    <input type="text" name="gambar" id="gambar">
+                    <input type="text" name="gambar" Id="gambar">
                     <label for="harga">Harga:</label>
-                    <input type="text" name="harga" id="harga">
+                    <input type="text" name="harga" Id="harga">
                     <button type="submit">Insert</button>
                 </form>
 
@@ -202,7 +203,7 @@ if (empty($_SESSION['role'])) {
                 </h2>
                 <form action="deleteanjing.php" method="post">
                     <label for="id">ID:</label>
-                    <input type="text" name="id" id="id">
+                    <input type="text" name="Id" id="Id">
                     <button type="submit">Delete</button>
                 </form>
                 <!-- updete data  -->
@@ -211,13 +212,13 @@ if (empty($_SESSION['role'])) {
                 </h2>
                 <form action="updateanjing.php" method="post">
                     <label for="Id">ID:</label>
-                    <input type="text" name="Id" id="Id">
+                    <input type="text" name="Id" Id="Id">
                     <label for="jenis">Jenis:</label>
-                    <input type="text" name="jenis" id="jenis">
+                    <input type="text" name="jenis" Id="jenis">
                     <label for="gambar">Gambar:</label>
-                    <input type="text" name="gambar" id="gambar">
+                    <input type="text" name="gambar" Id="gambar">
                     <label for="harga">Harga:</label>
-                    <input type="text" name="harga" id="harga">
+                    <input type="text" name="harga" Id="harga">
                     <button type="submit">Update</button>
                 </form>
                 <!-- table makanankucing -->
@@ -225,7 +226,7 @@ if (empty($_SESSION['role'])) {
                 <table class="w-full border">
                     <thead>
                         <tr>
-                            <th class="border p-2">ID</th>
+                            <th class="border p-2">iD</th>
                             <th class="border p-2">Merk</th>
                             <th class="border p-2">Gambar</th>
                             <th class="border p-2">Harga</th>
